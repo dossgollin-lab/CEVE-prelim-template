@@ -1,0 +1,242 @@
+@misc{alkin_universalphysicstransformers:2024,
+  title = {Universal {{Physics Transformers}}: {{A Framework For Efficiently Scaling Neural Operators}}},
+  author = {Alkin, Benedikt and F{\"u}rst, Andreas and Schmid, Simon and Gruber, Lukas and Holzleitner, Markus and Brandstetter, Johannes},
+  year = {2024},
+  month = oct,
+  number = {arXiv:2402.12365},
+  eprint = {2402.12365},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2402.12365},
+  urldate = {2024-10-11},
+  abstract = {Neural operators, serving as physics surrogate models, have recently gained increased interest. With ever increasing problem complexity, the natural question arises: what is an efficient way to scale neural operators to larger and more complex simulations - most importantly by taking into account different types of simulation datasets. This is of special interest since, akin to their numerical counterparts, different techniques are used across applications, even if the underlying dynamics of the systems are similar. Whereas the flexibility of transformers has enabled unified architectures across domains, neural operators mostly follow a problem specific design, where GNNs are commonly used for Lagrangian simulations and grid-based models predominate Eulerian simulations. We introduce Universal Physics Transformers (UPTs), an efficient and unified learning paradigm for a wide range of spatio-temporal problems. UPTs operate without grid- or particle-based latent structures, enabling flexibility and scalability across meshes and particles. UPTs efficiently propagate dynamics in the latent space, emphasized by inverse encoding and decoding techniques. Finally, UPTs allow for queries of the latent space representation at any point in space-time. We demonstrate diverse applicability and efficacy of UPTs in mesh-based fluid simulations, and steady-state Reynolds averaged Navier-Stokes simulations, and Lagrangian-based dynamics.},
+  archiveprefix = {arXiv}
+}
+% == BibTeX quality report for alkin_universalphysicstransformers:2024:
+% ? Title looks like it was stored in title-case in Zotero
+% ? unused Short title ("Universal Physics Transformers")
+% ? unused Url ("http://arxiv.org/abs/2402.12365")
+
+@article{bi_accurate:2023,
+  title = {Accurate Medium-Range Global Weather Forecasting with {{3D}} Neural Networks},
+  author = {Bi, Kaifeng and Xie, Lingxi and Zhang, Hengheng and Chen, Xin and Gu, Xiaotao and Tian, Qi},
+  year = {2023},
+  month = jul,
+  journal = {Nature},
+  volume = {619},
+  number = {7970},
+  pages = {533--538},
+  publisher = {Nature Publishing Group},
+  issn = {1476-4687},
+  doi = {10.1038/s41586-023-06185-3},
+  urldate = {2024-09-09},
+  abstract = {Weather forecasting is important for science and society. At present, the most accurate forecast system is the numerical weather prediction (NWP) method, which represents atmospheric states as discretized grids and numerically solves partial differential equations that describe the transition between those states1. However, this procedure is computationally expensive. Recently, artificial-intelligence-based methods2 have shown potential in accelerating weather forecasting by orders of magnitude, but the forecast accuracy is still significantly lower than that of NWP methods. Here we introduce an artificial-intelligence-based method for accurate, medium-range global weather forecasting. We show that three-dimensional deep networks equipped with Earth-specific priors are effective at dealing with complex patterns in weather data, and that a hierarchical temporal aggregation strategy reduces accumulation errors in medium-range forecasting. Trained on 39\,years of global data, our program, Pangu-Weather, obtains stronger deterministic forecast results on reanalysis data in all tested variables when compared with the world's best NWP system, the operational integrated forecasting system of the European Centre for Medium-Range Weather Forecasts (ECMWF)3. Our method also works well with extreme weather forecasts and ensemble forecasts. When initialized with reanalysis data, the accuracy of tracking tropical cyclones is also higher than that of ECMWF-HRES.},
+  copyright = {2023 The Author(s)}
+}
+% == BibTeX quality report for bi_accurate:2023:
+% ? unused Language ("en")
+% ? unused Library catalog ("www-nature-com.ezproxy.rice.edu")
+% ? unused Short title ("accurate")
+% ? unused Url ("https://www.nature.com/articles/s41586-023-06185-3")
+
+@misc{bi_pangu-weather:2022,
+  title = {Pangu-{{Weather}}: {{A 3D High-Resolution Model}} for {{Fast}} and {{Accurate Global Weather Forecast}}},
+  author = {Bi, Kaifeng and Xie, Lingxi and Zhang, Hengheng and Chen, Xin and Gu, Xiaotao and Tian, Qi},
+  year = {2022},
+  month = nov,
+  number = {arXiv:2211.02556},
+  eprint = {2211.02556},
+  primaryclass = {physics},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2211.02556},
+  urldate = {2023-11-13},
+  abstract = {In this paper, we present Pangu-Weather, a deep learning based system for fast and accurate global weather forecast. For this purpose, we establish a data-driven environment by downloading \$43\$ years of hourly global weather data from the 5th generation of ECMWF reanalysis (ERA5) data and train a few deep neural networks with about \$256\$ million parameters in total. The spatial resolution of forecast is \$0.25{\textasciicircum}{\textbackslash}circ{\textbackslash}times0.25{\textasciicircum}{\textbackslash}circ\$, comparable to the ECMWF Integrated Forecast Systems (IFS). More importantly, for the first time, an AI-based method outperforms state-of-the-art numerical weather prediction (NWP) methods in terms of accuracy (latitude-weighted RMSE and ACC) of all factors (e.g., geopotential, specific humidity, wind speed, temperature, etc.) and in all time ranges (from one hour to one week). There are two key strategies to improve the prediction accuracy: (i) designing a 3D Earth Specific Transformer (3DEST) architecture that formulates the height (pressure level) information into cubic data, and (ii) applying a hierarchical temporal aggregation algorithm to alleviate cumulative forecast errors. In deterministic forecast, Pangu-Weather shows great advantages for short to medium-range forecast (i.e., forecast time ranges from one hour to one week). Pangu-Weather supports a wide range of downstream forecast scenarios, including extreme weather forecast (e.g., tropical cyclone tracking) and large-member ensemble forecast in real-time. Pangu-Weather not only ends the debate on whether AI-based methods can surpass conventional NWP methods, but also reveals novel directions for improving deep learning weather forecast systems.},
+  archiveprefix = {arXiv}
+}
+% == BibTeX quality report for bi_pangu-weather:2022:
+% ? Title looks like it was stored in title-case in Zotero
+% ? unused Short title ("Pangu-Weather")
+% ? unused Url ("http://arxiv.org/abs/2211.02556")
+
+@article{hakim_:2024,
+  title = {Dynamical {{Tests}} of a {{Deep-Learning Weather Prediction Model}}},
+  author = {Hakim, Gregory J. and Masanam, Sanjit},
+  year = {2024},
+  month = may,
+  journal = {Artificial Intelligence for the Earth Systems},
+  volume = {-1},
+  number = {aop},
+  publisher = {American Meteorological Society},
+  issn = {2769-7525},
+  doi = {10.1175/AIES-D-23-0090.1},
+  urldate = {2024-06-05},
+  abstract = {Global deep-learning weather prediction models have recently been shown to produce forecasts that rival those from physics-based models run at operational centers. It is unclear whether these models have encoded atmospheric dynamics, or simply pattern matching that produces the smallest forecast error. Answering this question is crucial to establishing the utility of these models as tools for basic science. Here we subject one such model, Pangu-Weather, to a set of four classical dynamical experiments that do not resemble the model training data. Localized perturbations to the model output and the initial conditions are added to steady time-averaged conditions, to assess the propagation speed and structural evolution of signals away from the local source. Perturbing the model physics by adding a steady tropical heat source results in a classical Matsuno--Gill response near the heating, and planetary waves that radiate into the extratropics. A localized disturbance on the winter-averaged North Pacific jet stream produces realistic extratropical cyclones and fronts, including the spontaneous emergence of polar lows. Perturbing the 500hPa height field alone yields adjustment from a state of rest to one of wind--pressure balance over {$\sim$}6 hours. Localized subtropical low pressure systems produce Atlantic hurricanes, provided the initial amplitude exceeds about 4 hPa, and setting the initial humidity to zero eliminates hurricane development. We conclude that the model encodes realistic physics in all experiments, and suggest it can be used as a tool for rapidly testing a wide range of hypotheses.},
+  chapter = {Artificial Intelligence for the Earth Systems}
+}
+% == BibTeX quality report for hakim_:2024:
+% ? Title looks like it was stored in title-case in Zotero
+% ? unused Language ("EN")
+% ? unused Library catalog ("journals-ametsoc-org.ezproxy.rice.edu")
+% ? unused Url ("https://journals.ametsoc.org/view/journals/aies/aop/AIES-D-23-0090.1/AIES-D-23-0090.1.xml")
+
+@article{keisler_gnn:2022,
+  title = {Forecasting Global Weather with Graph Neural Networks},
+  author = {Keisler, Ryan},
+  year = {2022},
+  month = feb,
+  journal = {arXiv:2202.07575 [physics]},
+  eprint = {2202.07575},
+  primaryclass = {physics},
+  urldate = {2022-02-16},
+  abstract = {We present a data-driven approach for forecasting global weather using graph neural networks. The system learns to step forward the current 3D atmospheric state by six hours, and multiple steps are chained together to produce skillful forecasts going out several days into the future. The underlying model is trained on reanalysis data from ERA5 or forecast data from GFS. Test performance on metrics such as Z500 (geopotential height) and T850 (temperature) improves upon previous data-driven approaches and is comparable to operational, full-resolution, physical models from GFS and ECMWF, at least when evaluated on 1-degree scales and when using reanalysis initial conditions. We also show results from connecting this data-driven model to live, operational forecasts from GFS.},
+  archiveprefix = {arXiv}
+}
+% == BibTeX quality report for keisler_gnn:2022:
+% ? Possibly abbreviated journal title arXiv:2202.07575 [physics]
+% ? unused Short title ("gnn")
+% ? unused Url ("http://arxiv.org/abs/2202.07575")
+
+@misc{koldunov_aidownscaling:2024,
+  title = {Emerging {{AI-based}} Weather Prediction Models as Downscaling Tools},
+  author = {Koldunov, Nikolay and Rackow, Thomas and Lessig, Christian and Danilov, Sergey and Cheedela, Suvarchal K. and Sidorenko, Dmitry and Sandu, Irina and Jung, Thomas},
+  year = {2024},
+  month = jun,
+  number = {arXiv:2406.17977},
+  eprint = {2406.17977},
+  primaryclass = {physics},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2406.17977},
+  urldate = {2024-08-13},
+  abstract = {The demand for high-resolution information on climate change is critical for accurate projections and decision-making. Presently, this need is addressed through high-resolution climate models or downscaling. High-resolution models are computationally demanding and creating ensemble simulations with them is typically prohibitively expensive. Downscaling methods are more affordable but are typically limited to small regions. This study proposes the use of existing AI-based numerical weather prediction systems (AI-NWP) to perform global downscaling of climate information from low-resolution climate models. Our results demonstrate that AI-NWP initalized from low-resolution initial conditions can develop detailed forecasts closely resembling the resolution of the training data using a one day lead time. We constructed year-long atmospheric fields using AI-NWP forecasts initialized from smoothed ERA5 and low-resolution CMIP6 models. Our analysis for 2-metre temperature indicates that AI-NWP can generate high-quality, long-term datasets and potentially perform bias correction, bringing climate model outputs closer to observed data. The study highlights the potential for off-the-shelf AI-NWP to enhance climate data downscaling, offering a simple and computationally efficient alternative to traditional downscaling techniques. The downscaled data can be used either directly for localized climate information or as boundary conditions for further dynamical downscaling.},
+  archiveprefix = {arXiv}
+}
+% == BibTeX quality report for koldunov_aidownscaling:2024:
+% ? unused Short title ("AI downscaling")
+% ? unused Url ("http://arxiv.org/abs/2406.17977")
+
+@article{kratzert_lstm:2018,
+  title = {Rainfall--Runoff Modelling Using Long Short-Term Memory ({{LSTM}}) Networks},
+  author = {Kratzert, Frederik and Klotz, Daniel and Brenner, Claire and Schulz, Karsten and Herrnegger, Mathew},
+  year = {2018},
+  month = nov,
+  journal = {Hydrology and Earth System Sciences},
+  volume = {22},
+  number = {11},
+  pages = {6005--6022},
+  publisher = {Copernicus GmbH},
+  doi = {10.5194/hess-22-6005-2018},
+  abstract = {Abstract. Rainfall--runoff modelling is one of the key challenges in the field of hydrology. Various approaches exist, ranging from physically based over conceptual to fully data-driven models. In this paper, we propose a novel data-driven approach, using the Long Short-Term Memory (LSTM) network, a special type of recurrent neural network. The advantage of the LSTM is its ability to learn long-term dependencies between the provided input and output of the network, which are essential for modelling storage effects in e.g. catchments with snow influence. We use 241 catchments of the freely available CAMELS data set to test our approach and also compare the results to the well-known Sacramento Soil Moisture Accounting Model (SAC-SMA) coupled with the Snow-17 snow routine. We also show the potential of the LSTM as a regional hydrological model in which one model predicts the discharge for a variety of catchments. In our last experiment, we show the possibility to transfer process understanding, learned at regional scale, to individual catchments and thereby increasing model performance when compared to a LSTM trained only on the data of single catchments. Using this approach, we were able to achieve better model performance as the SAC-SMA + Snow-17, which underlines the potential of the LSTM for hydrological modelling applications.}
+}
+% == BibTeX quality report for kratzert_lstm:2018:
+% ? unused Journal abbreviation ("Hydrol. Earth Syst. Sci.")
+% ? unused Language ("en")
+% ? unused Short title ("lstm")
+
+@article{lam_graphcast:2022,
+  title = {{{GraphCast}}: {{Learning}} Skillful Medium-Range Global Weather Forecasting},
+  author = {Lam, Remi and {Sanchez-Gonzalez}, Alvaro and Willson, Matthew and Wirnsberger, Peter and Fortunato, Meire and Pritzel, Alexander and Ravuri, Suman and Ewalds, Timo and Alet, Ferran and {Eaton-Rosen}, Zach and Hu, Weihua and Merose, Alexander and Hoyer, Stephan and Holland, George and Stott, Jacklynn and Vinyals, Oriol and Mohamed, Shakir and Battaglia, Peter},
+  year = {2022},
+  month = dec,
+  doi = {10.48550/arXiv.2212.12794},
+  urldate = {2023-01-07},
+  abstract = {We introduce a machine-learning (ML)-based weather simulator--called "GraphCast"--which outperforms the most accurate deterministic operational medium-range weather forecasting system in the world, as well as all previous ML baselines. GraphCast is an autoregressive model, based on graph neural networks and a novel high-resolution multi-scale mesh representation, which we trained on historical weather data from the European Centre for Medium-Range Weather Forecasts (ECMWF)'s ERA5 reanalysis archive. It can make 10-day forecasts, at 6-hour time intervals, of five surface variables and six atmospheric variables, each at 37 vertical pressure levels, on a 0.25-degree latitude-longitude grid, which corresponds to roughly 25 x 25 kilometer resolution at the equator. Our results show GraphCast is more accurate than ECMWF's deterministic operational forecasting system, HRES, on 90.0\% of the 2760 variable and lead time combinations we evaluated. GraphCast also outperforms the most accurate previous ML-based weather forecasting model on 99.2\% of the 252 targets it reported. GraphCast can generate a 10-day forecast (35 gigabytes of data) in under 60 seconds on Cloud TPU v4 hardware. Unlike traditional forecasting methods, ML-based forecasting scales well with data: by training on bigger, higher quality, and more recent data, the skill of the forecasts can improve. Together these results represent a key step forward in complementing and improving weather modeling with ML, open new opportunities for fast, accurate forecasting, and help realize the promise of ML-based simulation in the physical sciences.}
+}
+% == BibTeX quality report for lam_graphcast:2022:
+% Missing required field 'journal'
+% ? unused Language ("en")
+% ? unused Library catalog ("arxiv.org")
+% ? unused Short title ("GraphCast")
+% ? unused Url ("https://arxiv.org/abs/2212.12794v1")
+
+@article{mcgreivy_overoptimism:2024,
+  title = {Weak Baselines and Reporting Biases Lead to Overoptimism in Machine Learning for Fluid-Related Partial Differential Equations},
+  author = {McGreivy, Nick and Hakim, Ammar},
+  year = {2024},
+  month = sep,
+  journal = {Nature Machine Intelligence},
+  pages = {1--14},
+  publisher = {Nature Publishing Group},
+  issn = {2522-5839},
+  doi = {10.1038/s42256-024-00897-5},
+  urldate = {2024-09-26},
+  abstract = {One of the most promising applications of machine learning in computational physics is to accelerate the solution of partial differential equations (PDEs). The key objective of machine-learning-based PDE solvers is to output a sufficiently accurate solution faster than standard numerical methods, which are used as a baseline comparison. We first perform a systematic review of the ML-for-PDE-solving literature. Out of all of the articles that report using ML to solve a fluid-related PDE and claim to outperform a standard numerical method, we determine that 79\% (60/76) make a comparison with a weak baseline. Second, we find evidence that reporting biases are widespread, especially outcome reporting and publication biases. We conclude that ML-for-PDE-solving research is overoptimistic: weak baselines lead to overly positive results, while reporting biases lead to under-reporting of negative results. To a large extent, these issues seem to be caused by factors similar to those of past reproducibility crises: researcher degrees of freedom and a bias towards positive results. We call for bottom-up cultural changes to minimize biased reporting and so top-down structural reforms to reduce perverse incentives for doing so.},
+  copyright = {2024 The Author(s), under exclusive licence to Springer Nature Limited}
+}
+% == BibTeX quality report for mcgreivy_overoptimism:2024:
+% ? unused Journal abbreviation ("Nat Mach Intell")
+% ? unused Language ("en")
+% ? unused Library catalog ("www-nature-com.ezproxy.rice.edu")
+% ? unused Short title ("overoptimism")
+% ? unused Url ("https://www.nature.com/articles/s42256-024-00897-5")
+
+@misc{pathak_fourcastnet:2022,
+  title = {{{FourCastNet}}: {{A Global Data-driven High-resolution Weather Model}} Using {{Adaptive Fourier Neural Operators}}},
+  author = {Pathak, Jaideep and Subramanian, Shashank and Harrington, Peter and Raja, Sanjeev and Chattopadhyay, Ashesh and Mardani, Morteza and Kurth, Thorsten and Hall, David and Li, Zongyi and Azizzadenesheli, Kamyar and Hassanzadeh, Pedram and Kashinath, Karthik and Anandkumar, Animashree},
+  year = {2022},
+  month = feb,
+  number = {arXiv:2202.11214},
+  eprint = {2202.11214},
+  primaryclass = {physics},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2202.11214},
+  urldate = {2022-07-03},
+  abstract = {FourCastNet, short for Fourier Forecasting Neural Network, is a global data-driven weather forecasting model that provides accurate short to medium-range global predictions at \$0.25{\textasciicircum}\{{\textbackslash}circ\}\$ resolution. FourCastNet accurately forecasts high-resolution, fast-timescale variables such as the surface wind speed, precipitation, and atmospheric water vapor. It has important implications for planning wind energy resources, predicting extreme weather events such as tropical cyclones, extra-tropical cyclones, and atmospheric rivers. FourCastNet matches the forecasting accuracy of the ECMWF Integrated Forecasting System (IFS), a state-of-the-art Numerical Weather Prediction (NWP) model, at short lead times for large-scale variables, while outperforming IFS for variables with complex fine-scale structure, including precipitation. FourCastNet generates a week-long forecast in less than 2 seconds, orders of magnitude faster than IFS. The speed of FourCastNet enables the creation of rapid and inexpensive large-ensemble forecasts with thousands of ensemble-members for improving probabilistic forecasting. We discuss how data-driven deep learning models such as FourCastNet are a valuable addition to the meteorology toolkit to aid and augment NWP models.},
+  archiveprefix = {arXiv}
+}
+% == BibTeX quality report for pathak_fourcastnet:2022:
+% ? unused Short title ("FourCastNet")
+% ? unused Url ("http://arxiv.org/abs/2202.11214")
+
+@misc{ramavajjala_heal-vit:2024,
+  title = {{{HEAL-ViT}}: {{Vision Transformers}} on a Spherical Mesh for Medium-Range Weather Forecasting},
+  author = {Ramavajjala, Vivek},
+  year = {2024},
+  month = feb,
+  number = {arXiv:2403.17016},
+  eprint = {2403.17016},
+  primaryclass = {physics},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2403.17016},
+  urldate = {2024-05-25},
+  abstract = {In recent years, a variety of ML architectures and techniques have seen success in producing skillful medium range weather forecasts. In particular, Vision Transformer (ViT)-based models (e.g. Pangu-Weather, FuXi) have shown strong performance, working nearly "out-of-the-box" by treating weather data as a multi-channel image on a rectilinear grid. While a rectilinear grid is appropriate for 2D images, weather data is inherently spherical and thus heavily distorted at the poles on a rectilinear grid, leading to disproportionate compute being used to model data near the poles. Graph-based methods (e.g. GraphCast) do not suffer from this problem, as they map the longitude-latitude grid to a spherical mesh, but are generally more memory intensive and tend to need more compute resources for training and inference. While spatially homogeneous, the spherical mesh does not lend itself readily to be modeled by ViT-based models that implicitly rely on the rectilinear grid structure. We present HEAL-ViT, a novel architecture that uses ViT models on a spherical mesh, thus benefiting from both the spatial homogeneity enjoyed by graph-based models and efficient attention-based mechanisms exploited by transformers. HEAL-ViT produces weather forecasts that outperform the ECMWF IFS on key metrics, and demonstrate better bias accumulation and blurring than other ML weather prediction models. Further, the lowered compute footprint of HEAL-ViT makes it attractive for operational use as well, where other models in addition to a 6-hourly prediction model may be needed to produce the full set of operational forecasts required.},
+  archiveprefix = {arXiv}
+}
+% == BibTeX quality report for ramavajjala_heal-vit:2024:
+% ? unused Short title ("HEAL-ViT")
+% ? unused Url ("http://arxiv.org/abs/2403.17016")
+
+@misc{sun_fuxiweather:2024,
+  title = {{{FuXi Weather}}: {{An}} End-to-End Machine Learning Weather Data Assimilation and Forecasting System},
+  author = {Sun, Xiuyu and Zhong, Xiaohui and Xu, Xiaoze and Huang, Yuanqing and Li, Hao and Feng, Jie and Han, Wei and Wu, Libo and Qi, Yuan},
+  year = {2024},
+  month = aug,
+  number = {arXiv:2408.05472},
+  eprint = {2408.05472},
+  primaryclass = {physics},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2408.05472},
+  urldate = {2024-09-21},
+  abstract = {Operational numerical weather prediction systems consist of three fundamental components: the global observing system for data collection, data assimilation for generating initial conditions, and the forecasting model to predict future weather conditions. While NWP have undergone a quiet revolution, with forecast skills progressively improving over the past few decades, their advancement has slowed due to challenges such as high computational costs and the complexities associated with assimilating an increasing volume of observational data and managing finer spatial grids. Advances in machine learning offer an alternative path towards more efficient and accurate weather forecasts. The rise of machine learning based weather forecasting models has also spurred the development of machine learning based DA models or even purely machine learning based weather forecasting systems. This paper introduces FuXi Weather, an end-to-end machine learning based weather forecasting system. FuXi Weather employs specialized data preprocessing and multi-modal data fusion techniques to integrate information from diverse sources under all-sky conditions, including microwave sounders from 3 polar-orbiting satellites and radio occultation data from Global Navigation Satellite System. Operating on a 6-hourly DA and forecasting cycle, FuXi Weather independently generates robust and accurate 10-day global weather forecasts at a spatial resolution of 0.25{\textbackslash}textdegree. It surpasses the European Centre for Medium-range Weather Forecasts high-resolution forecasts in terms of predictability, extending the skillful forecast lead times for several key weather variables such as the geopotential height at 500 hPa from 9.25 days to 9.5 days. The system's high computational efficiency and robust performance, even with limited observations, demonstrates its potential as a promising alternative to traditional NWP systems.},
+  archiveprefix = {arXiv}
+}
+% == BibTeX quality report for sun_fuxiweather:2024:
+% ? unused Short title ("FuXi Weather")
+% ? unused Url ("http://arxiv.org/abs/2408.05472")
+% ? unused Version number ("1")
+
+@misc{zhong_fuxi-extreme:2023,
+  title = {{{FuXi-Extreme}}: {{Improving}} Extreme Rainfall and Wind Forecasts with Diffusion Model},
+  author = {Zhong, Xiaohui and Chen, Lei and Liu, Jun and Lin, Chensen and Qi, Yuan and Li, Hao},
+  year = {2023},
+  month = oct,
+  number = {arXiv:2310.19822},
+  eprint = {2310.19822},
+  primaryclass = {physics, stat},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2310.19822},
+  urldate = {2024-04-25},
+  abstract = {Significant advancements in the development of machine learning (ML) models for weather forecasting have produced remarkable results. State-of-the-art ML-based weather forecast models, such as FuXi, have demonstrated superior statistical forecast performance in comparison to the high-resolution forecasts (HRES) of the European Centre for Medium-Range Weather Forecasts (ECMWF). However, ML models face a common challenge: as forecast lead times increase, they tend to generate increasingly smooth predictions, leading to an underestimation of the intensity of extreme weather events. To address this challenge, we developed the FuXi-Extreme model, which employs a denoising diffusion probabilistic model (DDPM) to restore finer-scale details in the surface forecast data generated by the FuXi model in 5-day forecasts. An evaluation of extreme total precipitation (\${\textbackslash}textrm\{TP\}\$), 10-meter wind speed (\${\textbackslash}textrm\{WS10\}\$), and 2-meter temperature (\${\textbackslash}textrm\{T2M\}\$) illustrates the superior performance of FuXi-Extreme over both FuXi and HRES. Moreover, when evaluating tropical cyclone (TC) forecasts based on International Best Track Archive for Climate Stewardship (IBTrACS) dataset, both FuXi and FuXi-Extreme shows superior performance in TC track forecasts compared to HRES, but they show inferior performance in TC intensity forecasts in comparison to HRES.},
+  archiveprefix = {arXiv}
+}
+% == BibTeX quality report for zhong_fuxi-extreme:2023:
+% ? unused Short title ("FuXi-Extreme")
+% ? unused Url ("http://arxiv.org/abs/2310.19822")

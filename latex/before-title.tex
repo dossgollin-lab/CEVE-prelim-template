@@ -1,0 +1,36 @@
+% format sections
+\usepackage[noindentafter,explicit]{titlesec}
+%
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection}{1em}{#1}
+\titlespacing{\section}{0pt}{0.5em}{0em}
+%
+\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection}{1em}{#1}
+\titlespacing{\subsection}{0pt}{0.25em}{0em}
+%
+\titleformat{\subsubsection}{\normalfont\itshape\bfseries}{\thesubsubsection}{1em}{#1}
+\titlespacing{\subsubsection}{0pt}{0.25em}{0pt}
+%
+\titleformat{\paragraph}[runin]{\normalfont\itshape}{\theparagraph}{1em}{\underline{#1}}
+\titlespacing{\paragraph}{0pt}{0.25em}{0.5em}
+
+% no extra spacing between or before items of alist
+\usepackage{enumitem}
+\setlist[itemize,enumerate,description]{nosep}
+
+% remove spacing between paragraphs
+\setlength{\parskip}{0pt}
+
+% indent paragraphs except the first
+\setlength{\parindent}{1em}
+
+% better title
+\usepackage{titling}
+\makeatletter
+\renewcommand\maketitle{
+  {\raggedright % Note the extra {
+      \begin{center}
+        {\large \bfseries \@title }\\[0.25em]
+        {\@author\\[0.25em]}
+        {\@date}\\[0.25em]
+      \end{center}}} % Note the extra }
+\makeatother

@@ -1,0 +1,78 @@
+---
+title: My Title  # The title of the document
+author: My Name  # The author of the document
+date: 2025-03-17  # The date of the document
+
+format:
+    html: default  # Output format for HTML
+    pdf:
+        documentclass: article  # LaTeX document class
+        margin-bottom: 1in  # Bottom margin
+        margin-top: 1in  # Top margin
+        margin-left: 1in  # Left margin
+        margin-right: 1in  # Right margin
+        fontsize: 12pt  # Font size
+        papersize: letter  # Paper size
+        mainfont: Arial  # Main font
+        number-sections: true  # Enable section numbering
+        number-sections-level: 3  # Level of section numbering
+
+bibliography: ../shared/references.bib  # Path to bibliography file
+csl: ../shared/american-geophysical-union.csl  # Path to CSL file for citation styling
+---
+
+# Introduction
+
+This is an example Quarto + LaTeX template for a grant proposal.
+We use `#` for sections, `##` for subsections, and `###` for subsubsections.
+
+# Methods
+
+Here we describe our approach.
+All referencing, page layout, and margin  settings are done by Quarto.
+The LaTeX template only handles fonts and  the look of sections/titles.
+
+It's good practice to put each sentence on its own line of code.
+This makes it easier to use tools like git to track changes.open latex
+
+## References
+
+This is a subsection.
+
+It's easy to use references in Quarto Markdown.
+Just say something, then add the citation [@keisler_gnn:2022;@kratzert_lstm:2018].
+These make use of the citation key -- see [here](https://dossgollin-lab.github.io/lab-guide/posts/2024-08-15-zotero.html) for more information on using Zotero, Better BibTeX, and citation keys.
+See more on Quarto citations [here](https://quarto.org/docs/authoring/citations.html).
+
+## Equations
+
+This is another subsection
+
+Equations are really easy, just like this:
+$$
+E = mc^2
+$$
+We can also label equations:
+The [Quarto Docs](https://quarto.org/docs/authoring/cross-references.html#equations) give this example.
+Black-Scholes (@eq-black-scholes) is a mathematical model that seeks to explain the behavior of financial derivatives, most commonly options:
+$$
+\frac{\partial \mathrm C}{ \partial \mathrm t } + \frac{1}{2}\sigma^{2} \mathrm S^{2}
+\frac{\partial^{2} \mathrm C}{\partial \mathrm S^2}
+  + \mathrm r \mathrm S \frac{\partial \mathrm C}{\partial \mathrm S}\ =
+  \mathrm r \mathrm C 
+$$ {#eq-black-scholes}
+We can also use inline equations, like this: $sin(x) \approx x$.
+For systems of equations, we can use the `aligned` environment.
+This is useful for writing equations that are aligned at the equals sign.
+
+$$
+\begin{aligned}
+x^2 + y^2 &= z^2 \\
+x^2 - y^2 &= (x+y)(x-y)
+\end{aligned}
+$$
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
