@@ -17,8 +17,8 @@ format:
         number-sections: true  # Enable section numbering
         number-sections-level: 3  # Level of section numbering
 
-bibliography: ../shared/references.bib  # Path to bibliography file
-csl: ../shared/american-geophysical-union.csl  # Path to CSL file for citation styling
+bibliography: _assets_/references.bib  # Path to bibliography file
+csl: _assets/american-geophysical-union.csl  # Path to CSL file for citation styling
 ---
 
 # Introduction
