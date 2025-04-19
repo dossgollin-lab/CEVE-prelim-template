@@ -1,7 +1,7 @@
 ---
-title: My Title  # The title of the document
-author: My Name  # The author of the document
-date: 2025-03-17  # The date of the document
+title: "`<Your Title>`"  # The title of the document
+author: "Your Name (`<Your NetID>`)"  # The author of the document (you!)
+date: today  # The date of the document (set to your due date)
 
 format:
     html: default  # Output format for HTML
@@ -11,31 +11,51 @@ format:
         margin-top: 1in  # Top margin
         margin-left: 1in  # Left margin
         margin-right: 1in  # Right margin
-        fontsize: 12pt  # Font size
+        fontsize: 11pt  # Font size
         papersize: letter  # Paper size
         mainfont: Arial  # Main font
         number-sections: true  # Enable section numbering
         number-sections-level: 3  # Level of section numbering
+        template-partials:
+          - _assets/before-title.tex
 
-bibliography: _assets_/references.bib  # Path to bibliography file
+date-format: long  # Date format
+
+bibliography: ./references.bib  # Path to bibliography file
 csl: _assets/american-geophysical-union.csl  # Path to CSL file for citation styling
 ---
 
-# Introduction
+# How to Use This Template
 
-This is an example Quarto + LaTeX template for a grant proposal.
+This is an example Quarto + LaTeX template for a prelim proposal.
 We use `#` for sections, `##` for subsections, and `###` for subsubsections.
 
-# Methods
+## Installation
 
-Here we describe our approach.
+You'll need to install the following software to use this template:
+
+1. [Quarto](https://quarto.org/docs/get-started/) - the main software for rendering the document.
+2. [Visual Studio Code](https://code.visualstudio.com/) - a code editor that works well with Quarto. You can use other text editors, but VS Code is recommended.
+
+Excellent tutorials are available for both tools.
+
+## Cloning this Template
+
+1. Assuming you have a GitHub account, follow [these instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) to create a new repository from this template.
+2. Clone the new repository to your local machine using Git.
+3. Open the folder in Visual Studio Code.
+4. Make edits such as
+
+
+# How to Write
+
 All referencing, page layout, and margin  settings are done by Quarto.
 The LaTeX template only handles fonts and  the look of sections/titles.
 
 It's good practice to put each sentence on its own line of code.
-This makes it easier to use tools like git to track changes.open latex
+This makes it easier to use tools like `git` to track changes.
 
-## References
+## Using References
 
 This is a subsection.
 
@@ -61,7 +81,7 @@ $$
   + \mathrm r \mathrm S \frac{\partial \mathrm C}{\partial \mathrm S}\ =
   \mathrm r \mathrm C 
 $$ {#eq-black-scholes}
-We can also use inline equations, like this: $sin(x) \approx x$.
+We can also use inline equations, like this: $\sin(x) \approx x, x \approx 0$.
 For systems of equations, we can use the `aligned` environment.
 This is useful for writing equations that are aligned at the equals sign.
 
@@ -71,6 +91,21 @@ x^2 + y^2 &= z^2 \\
 x^2 - y^2 &= (x+y)(x-y)
 \end{aligned}
 $$
+
+# Preliminary Exam Policies
+
+You have received a copy of the questions.
+
+## AI Policy
+
+The use of AI tools is not allowed in this exam, with the exception of the following:
+
+1. Literature review: you may use any tools to help you find and summarize relevant literature. 
+2. LaTeX math syntax: you may use tools, including online LLMs, to help you convert handwritten math to LaTeX syntax.
+
+Please note that you are 
+
+## Rice Honor Code
 
 # References {.unnumbered}
 

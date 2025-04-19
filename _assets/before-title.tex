@@ -27,10 +27,31 @@
 \usepackage{titling}
 \makeatletter
 \renewcommand\maketitle{
-  {\raggedright % Note the extra {
-      \begin{center}
-        {\large \bfseries \@title }\\[0.25em]
-        {\@author\\[0.25em]}
-        {\@date}\\[0.25em]
-      \end{center}}} % Note the extra }
+  \begin{titlepage}
+    \begin{center}
+      \vspace*{4cm}
+
+      {\Large \textbf{\@title}} % Thesis Title
+
+      \vspace{2cm}
+
+      \textbf{\@author} % Author Name
+
+      \vfill
+
+      Ph.D. Prelim Examination\\
+      \@date\\ % Date
+
+      \vspace{1cm}
+
+
+      Department of Civil and Environmental Engineering \\
+
+      \vspace{0.5cm}
+
+      \includegraphics[width=0.4\textwidth]{fig/Rice_University_Logo_280_Blue} % University logo
+
+    \end{center}
+  \end{titlepage}
+}
 \makeatother
