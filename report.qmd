@@ -11,12 +11,12 @@ format:
         margin-top: 1in  # Top margin
         margin-left: 1in  # Left margin
         margin-right: 1in  # Right margin
-        fontsize: 12pt  # Font size
+        fontsize: 11pt  # Font size
         linestretch: 1.5  # Line spacing
         papersize: letter  # Paper size
-        mainfont: Arial  # Main font
         number-sections: true  # Enable section numbering
         number-sections-level: 3  # Level of section numbering
+        mainfont: Arial  # Main font, you can change this to any READABLE font you like
         template-partials:
           - _assets/before-title.tex
     docx: default  # Output format for Word
@@ -25,6 +25,10 @@ date-format: long  # Date format
 
 bibliography: ./references.bib  # Path to bibliography file
 csl: _assets/american-geophysical-union.csl  # Path to CSL file for citation styling
+
+abstract: |
+  This is the abstract.
+  You should edit it to include a summary of your work.
 ---
 
 # How to Use This Template
