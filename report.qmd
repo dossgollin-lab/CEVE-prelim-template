@@ -11,13 +11,15 @@ format:
         margin-top: 1in  # Top margin
         margin-left: 1in  # Left margin
         margin-right: 1in  # Right margin
-        fontsize: 11pt  # Font size
+        fontsize: 12pt  # Font size
+        linestretch: 1.5  # Line spacing
         papersize: letter  # Paper size
         mainfont: Arial  # Main font
         number-sections: true  # Enable section numbering
         number-sections-level: 3  # Level of section numbering
         template-partials:
           - _assets/before-title.tex
+    docx: default  # Output format for Word
 
 date-format: long  # Date format
 
@@ -27,8 +29,7 @@ csl: _assets/american-geophysical-union.csl  # Path to CSL file for citation sty
 
 # How to Use This Template
 
-This is an example Quarto + LaTeX template for a prelim proposal.
-We use `#` for sections, `##` for subsections, and `###` for subsubsections.
+This is a template for the Rice University Civil and Environmental Engineering (CEVE) preliminary exam.
 
 ## Installation
 
@@ -42,20 +43,45 @@ Excellent tutorials are available for both tools.
 ## Cloning this Template
 
 1. Assuming you have a GitHub account, follow [these instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) to create a new repository from this template.
-2. Clone the new repository to your local machine using Git.
-3. Open the folder in Visual Studio Code.
-4. Make edits such as
+1. Change the settings of your new repository to make it private.
+1. Clone the new repository to your local machine using Git.
+1. Open the folder in Visual Studio Code.
+1. Edit the title and author information in the YAML header at the top of the document.
 
+## Rendering the Document
 
-# How to Write
+There are two ways to render the document:
 
-All referencing, page layout, and margin  settings are done by Quarto.
-The LaTeX template only handles fonts and  the look of sections/titles.
+- **Preview** the document to get a quick, real-time view of the changes you make.
+  1. Open the terminal in VS Code (Ctrl+` or Cmd+`).
+  2. Type `quarto preview report.qmd` and hit enter. It will open a new tab in your browser with the rendered document. You can arrange the text editor and the browser side by side for easy editing and previewing.
+
+- **Render** the document to create a final version in PDf format.
+  1. Open the command palette in VS Code (Ctrl+Shift+P or Cmd+Shift+P).
+  2. Select "Quarto: Render Document"
+  3. Select "Render PDF" from the options
+  4. Open `report.pdf` in the same folder as this document to see the final version.
+
+## How to Write Your Report
+
+Quarto Markdown is a simple and powerful way to write documents.
+All referencing, page layout, and margin  settings are done using template settings that you don't need to edit.
+That lets you focus on writing your report.
+
+For example, you can use Markdown to create sections and subsections.
+We use `#` for sections, `##` for subsections, and `###` for subsubsections.
+The number of `#` symbols indicates the level of the section.
+Section formatting is done automatically, so you don't need to worry about it.
+
+### Some Best Practices
 
 It's good practice to put each sentence on its own line of code.
-This makes it easier to use tools like `git` to track changes.
+This makes it easier to use tools like `git` to track changes over time.
+This template uses this practice, so you can see how it works.
 
-## Using References
+You should commit your changes to Git regularly and push them to your GitHub repository.
+
+### Using References
 
 This is a subsection.
 
@@ -64,7 +90,9 @@ Just say something, then add the citation [@keisler_gnn:2022;@kratzert_lstm:2018
 These make use of the citation key -- see [here](https://dossgollin-lab.github.io/lab-guide/posts/2024-08-15-zotero.html) for more information on using Zotero, Better BibTeX, and citation keys.
 See more on Quarto citations [here](https://quarto.org/docs/authoring/citations.html).
 
-## Equations
+For a tutorial on creating `.bib` files with Zotero, see [this tutorial](https://dossgollin-lab.github.io/lab-guide/posts/2024-08-15-zotero.html).
+
+### Equations
 
 This is another subsection
 
@@ -81,7 +109,7 @@ $$
   + \mathrm r \mathrm S \frac{\partial \mathrm C}{\partial \mathrm S}\ =
   \mathrm r \mathrm C 
 $$ {#eq-black-scholes}
-We can also use inline equations, like this: $\sin(x) \approx x, x \approx 0$.
+We can also use inline equations, like this: $\sin(x) \approx x$ for $x \approx 0$.
 For systems of equations, we can use the `aligned` environment.
 This is useful for writing equations that are aligned at the equals sign.
 
@@ -92,9 +120,31 @@ x^2 - y^2 &= (x+y)(x-y)
 \end{aligned}
 $$
 
+### Adding Figures
+
+As discussed in the [Quarto documentation](https://quarto.org/docs/authoring/figures.html), you can add figures to the document.
+You may use figures that you created, or figures that you found from external sources (provided they are properly cited).
+It is best to use vector graphics (like `.pdf` or `.svg`) for figures, but you can also use raster graphics (like `.png` or `.jpg`).
+
+![A figure caption goes here](fig/ERCOT_HDD_blog.pdf){#fig-ercot-hdd width=4.5in}
+
+You can cross-reference figures and numbers will automatically be updated, as in @fig-ercot-hdd.
+
+### Learn More
+
+This is not a comprehensive guide to Quarto.
+See the [Quarto tutorials](https://quarto.org/docs/get-started/hello/jupyter.html) to learn about other features.
+
+
+
 # Preliminary Exam Policies
 
 You have received a copy of the questions.
+**Requirements, evaluation criteria, suggested structure, and helpful resources are covered in the Rice CEVE Graduate Student Handbook.**
+
+Formatting requirements (1.5 line spacing, 12 pint font, 1 inch margins) specified in the 2024--2025 handbook are already implemented in this template, but you should confirm that the final document meets these requirements and check the handbook for any updates.
+References and the title page are not included in the page count.
+You are responsible for ensuring that the final document meets all formatting requirements.
 
 ## AI Policy
 
@@ -102,10 +152,17 @@ The use of AI tools is not allowed in this exam, with the exception of the follo
 
 1. Literature review: you may use any tools to help you find and summarize relevant literature. 
 2. LaTeX math syntax: you may use tools, including online LLMs, to help you convert handwritten math to LaTeX syntax.
+3. Grammarly: you may use Grammarly to help with proofreading and grammar checking. To use Grammarly, follow the directions to render the document, but render to Word format instead of PDF. Upload the file to Grammarly, then make suggested changes in your Quarto document.
 
-Please note that you are 
+Please note that this policy  specifically includes, but is not limited to, the use of online tools like ChatGPT or Gemini as well as tools built into the IDE you are using.
+You must turn off autocomplete and other AI features in your IDE.
 
 ## Rice Honor Code
+
+This exam is governed by the Rice Honor Code.
+You are expected to follow the guidelines outlined in the [Rice Honor Code](https://honor.rice.edu/).
+
+\clearpage
 
 # References {.unnumbered}
 

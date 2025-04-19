@@ -1,5 +1,6 @@
 *.typ
 *.html
 *.pdf
+*.docx
 */*_files/
 *_files/
