@@ -163,16 +163,19 @@ You are responsible for ensuring that the final document meets all formatting re
 
 ### AI Policy
 
-The use of AI tools for this exam is strictly prohibited, with the exception of the following:
+The use of AI tools for this exam **is strictly prohibited**, with the exception of the following:
 
-1. Literature review: you may use online tools to help you find relevant literature (e.g., elicit.org) and help you understand relevant literature (e.g., NotebookLM). However, you are responsible for
-2. LaTeX math syntax: you may use tools, including online LLMs, to help you convert handwritten math to LaTeX syntax.
+1. Literature review: you may use *specialized* online tools to help you find relevant literature (e.g., Google Scholar; elicit.org) and help you understand relevant literature (e.g., NotebookLM). However, you are responsible for any content you include in your exam, and you must read and understand all material you cite. You **may not** use general-purpose AI tools (e.g., ChatGPT, Gemini) for these purposes.
+2. LaTeX math syntax: you may use *specialized* online tools, such as MathPix, to help you write LaTeX math syntax. However, you are responsible for any content you include in your exam, and you must read and understand all material you include. You **may not** use general-purpose AI tools (e.g., ChatGPT, Gemini) or any tools that are capable of providing feedback on the accuracy of your equations for these purposes.
 3. Grammarly: you may use Grammarly to help with proofreading and grammar checking. To use Grammarly, follow the directions to render the document, but render to Word format instead of PDF. Upload the file to Grammarly, then make suggested changes in your Quarto document.
 
-Please note that this policy  specifically includes, but is not limited to, the use of online tools like ChatGPT or Gemini as well as tools built into the IDE you are using.
+If you use any of the above tools, you must include a section at the end of your exam (not included in the page limit) listing the tools you used and how you used them.
+
+If you have any questions about whether a specific use of AI is allowed, please ask Dr. Doss-Gollin before proceeding.
+Please note that this policy specifically includes, but is not limited to, the use of online tools like ChatGPT or Gemini as well as tools built into the IDE you are using.
 You must turn off autocomplete and other AI features in your IDE.[^turnoff]
 
-[^turnoff]: In Visual Studio Code, you can turn off autocomplete by going to Settings (Ctrl+, or Cmd+,), going to "Workspace settings" (rather than "User settings"), searching for `inlineSuggest`, and uncheck the box. The configuration file implementing this setting is included in this repository, so this should work automatically.
+[^turnoff]: In Visual Studio Code, you can turn off autocomplete by going to Settings ({{< kbd Ctrl+, >}} or {{< kbd Cmd+, >}}), going to "Workspace settings" (rather than "User settings"), searching for `inlineSuggest`, and uncheck the box. The configuration file implementing this setting is included in this repository, so this should work automatically.
 
 ### Rice Honor Code
 
