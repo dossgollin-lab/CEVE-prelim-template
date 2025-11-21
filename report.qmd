@@ -4,27 +4,22 @@ author: "Your Name (`<Your NetID>`)"  # The author of the document (you!)
 date: today  # The date of the document (set to your due date)
 
 format:
-    html: default  # Output format for HTML
-    pdf:
-        documentclass: article  # LaTeX document class
-        margin-bottom: 1in  # Bottom margin
-        margin-top: 1in  # Top margin
-        margin-left: 1in  # Left margin
-        margin-right: 1in  # Right margin
-        fontsize: 11pt  # Font size
-        linestretch: 1.5  # Line spacing
-        papersize: letter  # Paper size
-        number-sections: true  # Enable section numbering
-        number-sections-level: 3  # Level of section numbering
-        mainfont: Arial  # Main font, you can change this to any READABLE font you like
-        template-partials:
-          - _assets/before-title.tex
-    docx: default  # Output format for Word
+    typst:
+        page-numbering: false
+        margin:
+            top: 1in
+            bottom: 1in
+            left: 1in
+            right: 1in
+        font-size: 11pt
+        line-spacing: 1.5
+        number-sections: true
+        include-in-header: typst-template.typ
 
 date-format: long  # Date format
 
-bibliography: ./references.bib  # Path to bibliography file
-csl: _assets/american-geophysical-union.csl  # Path to CSL file for citation styling
+bibliography: references.bib  # Path to bibliography file
+csl: american-geophysical-union.csl
 
 abstract: |
   This is the abstract.
@@ -32,21 +27,25 @@ abstract: |
   The abstract will go on the first page.
 ---
 
-\clearpage
+{{< pagebreak >}}
 
 ## Prompt {.unnumbered}
 
 
-*Please copy and paste the prompt you were given here.*
-*Remove the italic formatting.*
+*Please copy and paste the prompt you were given here, without any italic formatting.*
 
-\clearpage
+{{< pagebreak >}}
 
-# How to Use This Template
+```{=typst}
+#set page(numbering: "1")
+#counter(page).update(1)
+```
+
+## How to Use This Template
 
 This is a template for the Rice University Civil and Environmental Engineering (CEVE) preliminary exam.
 
-## Installation
+### Installation
 
 You'll need to install the following software to use this template:
 
@@ -55,7 +54,7 @@ You'll need to install the following software to use this template:
 
 Excellent tutorials are available for both tools.
 
-## Cloning this Template
+### Cloning this Template
 
 1. Assuming you have a GitHub account, follow [these instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) to create a new repository from this template.
 1. Change the settings of your new repository **to make it private.**
@@ -63,7 +62,7 @@ Excellent tutorials are available for both tools.
 1. Open the folder in Visual Studio Code.
 1. Edit the title and author information in the YAML header at the top of the document.
 
-## Rendering the Document
+### Rendering the Document
 
 There are two ways to render the document:
 
@@ -84,7 +83,7 @@ All referencing, page layout, and margin  settings are done using template setti
 That lets you focus on writing your report.
 
 For example, you can use Markdown to create sections and subsections.
-We use `#` for sections, `##` for subsections, and `###` for subsubsections.
+We use `##` for sections, `###` for subsections, and `####` for subsubsections.
 The number of `#` symbols indicates the level of the section.
 Section formatting is done automatically, so you don't need to worry about it.
 
@@ -95,6 +94,7 @@ This makes it easier to use tools like `git` to track changes over time.
 This template uses this practice, so you can see how it works.
 
 You should commit your changes to Git regularly and push them to your GitHub repository.
+You will not be given extra time if you accidentally delete your work.
 
 ### Using References
 
@@ -139,9 +139,9 @@ $$
 
 As discussed in the [Quarto documentation](https://quarto.org/docs/authoring/figures.html), you can add figures to the document.
 You may use figures that you created, or figures that you found from external sources (provided they are properly cited).
-It is best to use vector graphics (like `.pdf` or `.svg`) for figures, but you can also use raster graphics (like `.png` or `.jpg`).
+There are advanced options for setting width, adding captions, and cross-referencing, so use these appropriately.
 
-![A figure caption goes here](fig/ERCOT_HDD_blog.pdf){#fig-ercot-hdd width=4.5in}
+![A figure caption goes here](fig/ERCOT_HDD_blog.jpg){#fig-ercot-hdd width=4.5in}
 
 You can cross-reference figures and numbers will automatically be updated, as in @fig-ercot-hdd.
 
@@ -150,7 +150,7 @@ You can cross-reference figures and numbers will automatically be updated, as in
 This is not a comprehensive guide to Quarto.
 See the [Quarto tutorials](https://quarto.org/docs/get-started/hello/jupyter.html) to learn about other features.
 
-# Preliminary Exam Policies
+## Preliminary Exam Policies
 
 You have received a copy of the questions.
 **Requirements, evaluation criteria, suggested structure, and helpful resources are covered in the Rice CEVE Graduate Student Handbook.**
@@ -161,28 +161,25 @@ You are responsible for ensuring that the final document meets all formatting re
 
 [^font]: The handbook says 12 point font, but all examples I have seen use 11 point font. Consider this your official permission to use 11 point font.
 
-## AI Policy
+### AI Policy
 
-The use of AI tools is not allowed in this exam, with the exception of the following:
+The use of AI tools for this exam is strictly prohibited, with the exception of the following:
 
-1. Literature review: you may use any tools to help you find and summarize relevant literature. 
+1. Literature review: you may use online tools to help you find relevant literature (e.g., elicit.org) and help you understand relevant literature (e.g., NotebookLM). However, you are responsible for
 2. LaTeX math syntax: you may use tools, including online LLMs, to help you convert handwritten math to LaTeX syntax.
 3. Grammarly: you may use Grammarly to help with proofreading and grammar checking. To use Grammarly, follow the directions to render the document, but render to Word format instead of PDF. Upload the file to Grammarly, then make suggested changes in your Quarto document.
 
 Please note that this policy  specifically includes, but is not limited to, the use of online tools like ChatGPT or Gemini as well as tools built into the IDE you are using.
 You must turn off autocomplete and other AI features in your IDE.[^turnoff]
-**Anything you write is considered fair game for follow-up questions,** so unauthorized use of AI tools is unlikely to work your favor.
 
 [^turnoff]: In Visual Studio Code, you can turn off autocomplete by going to Settings (Ctrl+, or Cmd+,), going to "Workspace settings" (rather than "User settings"), searching for `inlineSuggest`, and uncheck the box. The configuration file implementing this setting is included in this repository, so this should work automatically.
 
-## Rice Honor Code
+### Rice Honor Code
 
 This exam is governed by the Rice Honor Code.
 You are expected to follow the guidelines outlined in the [Rice Honor Code](https://honor.rice.edu/).
 
-\clearpage
-
-# References {.unnumbered}
+{{< pagebreak >}}
 
 ::: {#refs}
 :::
